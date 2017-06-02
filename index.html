@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="utf8"/> 
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+	var nombre_var=null;
+	var edad_var=null;
+	var email_var=null;
+	var ocupacion_var=null;
+
+	$(document).ready(function(){
+
+		$('#enviar').click(function(){
+			nombre_var = $('#nombre').val();
+			edad_var = $('#edad').val();
+			email_var = $('#email').val();
+			ocupacion_var = $('#ocupacion').val();
+
+			/*alert('var1:'+nombre_var+',var2:'+edad_var +',var3:'+email_var+',var4:'+ocupacion_var);
+*/
+			$.post('enviar.php',{var1:nombre_var,var2:edad_var,var3:email_var,var4:ocupacion_var},function(){});
+			});
+
+	});
+	</script>
+	<label>Nombre</label>
+	<input type="text" id="nombre" />
+	<br>
+	<label>Edad</label>
+	<input type="number" id="edad" />
+	<br>
+	<label>Correo electrónico</label>
+	<input type="email" id="email" />
+	<br>
+	<label>Ocupación</label> 
+	<input type="text" id="ocupacion" />
+	<br>
+	<input type="button" id="enviar" value="Enviar" />
+<body>
+</hmtl>
