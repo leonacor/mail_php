@@ -7,13 +7,9 @@ $ocupacion_var = $_POST['var4'];
 
 $mensaje = 'Hola mi nombre es '.$nombre_var.' \n y mi edad es '.$edad_var.' \n tambien mi correo es '.$email_var.' \n y mi ocupación es '.$ocupacion_var;
 
-
-
-
-
-
-$mail('leon_acor@hotmail.com','mensaje enviado',$mensaje);
-
-
+//falta linea final de la practica (pendiente en clase)
+$respuesta = mail('leon_acor@hotmail.com','mensaje enviado',$mensaje);
+echo ($respuesta);
+//función echo para desplegar texto en pantalla
 
 ?>
