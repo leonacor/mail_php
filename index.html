@@ -22,8 +22,10 @@
 */
 			//se agrego el parametro f para la función callback (lo que regresa 'echo' en php)
 			$.post('enviar.php',{var1:nombre_var,var2:edad_var,var3:email_var,var4:ocupacion_var},function(f){
-					alert(f);
+					alert('respuesta desde php (funcion echo): '+f);
 			});
+			
+		});
 
 	});
 	</script>
